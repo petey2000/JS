@@ -1,0 +1,28 @@
+/* Modul: Todolist */
+.m-todolist ul.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.m-todolist ul.list li .button-delete-todo {
+  color: #888;
+}
+.m-todolist ul.list li .button-delete-todo::before {
+  content: "\f057";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 24px;
+}
+.m-todolist ul.list li .button-delete-todo:hover, .m-todolist ul.list li .button-delete-todo:focus {
+  outline: none;
+  box-shadow: none;
+  color: #555555;
+}
+.m-todolist ul.list li input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+}
+.m-todolist ul.list li .datetime {
+  color: #bbb;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,29 @@
+*,
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.m-nerdshop h1 {
+  margin-bottom: 2rem;
+}
+.m-nerdshop table .td-desc {
+  max-width: 300px;
+}
+.m-nerdshop table .td-tagline {
+  max-width: 200px;
+}
+.m-nerdshop table button {
+  margin: 3px;
+}
+.m-nerdshop table button.button-add i {
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */

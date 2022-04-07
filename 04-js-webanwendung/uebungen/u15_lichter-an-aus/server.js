@@ -1,0 +1,63 @@
+const http = require('http'); // Aus der Standardbibliothek von NodeJs
+const express = require('express');
+const color = require('chalk');
+const socketIo = require('socket.io');
+
+const app = express();
+
+// socket.io Initialization
+const webServer = http.Server(app);
+const io = socketIo(webServer);
+
+const host = 'localhost'; // 127.0.0.1
+const port = 3000;
+
+let lightStatus = false;
+
+// Middleware
+app.use(express.static('public'));
+
+app.use(express.json()); // HTTP-Request Body Informationen werden als JSON erwartet und in JS-Objekt-Notation umgewandelt
+app.use(express.urlencoded({ extended: true })); // URL-encoded Satzeichen werden automatisch decoded
+
+// ROUTING ================
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
+// RUN ==================
+const run = () => {
+  io.on('connection', onSocketConnection);
+};
+
+// EVENTS =================
+const onSocketConnection = (socket) => {
+  console.log(
+    `Client mit ID: ${color.yellow(socket.id)} über Addresse: ${color.yellow(
+      socket.conn.remoteAddress
+    )} connected.`
+  );
+
+  socket.on('get light status', () => {
+    socket.emit('set light status', lightStatus);
+  });
+
+  socket.on('toggle light status', () => {
+    lightStatus = !lightStatus;
+
+    io.emit('set light status', lightStatus);
+    // socket.emit('set light status', lightStatus);
+    // socket.broadcast.emit('set light status', lightStatus);
+  });
+};
+
+// FUNCTIONS =================
+
+// on Socket connection - Verbindung über WebSocket Protokoll via Socket.io findet statt.
+
+webServer.listen(port, host, () => {
+  console.log(color.magenta(`Server is running at: http://${host}:${port}`));
+  console.log(color.yellow('CTRL + C to shutdown'));
+
+  run();
+});

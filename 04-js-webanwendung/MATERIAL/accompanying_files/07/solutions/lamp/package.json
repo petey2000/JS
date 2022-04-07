@@ -1,0 +1,10 @@
+{
+    "name": "lamp",
+    "version": "1.0.0",
+    "description": "lamp: a socket.io exercise",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "^3.1.1"
+    }
+}

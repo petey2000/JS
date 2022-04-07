@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The Chat</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <h1>Chat</h1>
+
+      <div id="chat">
+        <div id="chat_window">
+          <div id="chat_history">
+            <p><span class="chat_member chat_member1">Ladislaus:</span> Anybody there?</p>
+            <p><span class="chat_member chat_member2">Friedlinde</span> Yes, me!</p>
+          </div>
+
+          <div id="chat_text">
+            <input type="text" placeholder="...new message..." />
+          </div>
+        </div>
+
+        <ul id="chat_members">
+          <li class="admin">Heribert</li>
+          <li>Friedlinde</li>
+          <li>Tusnelda</li>
+          <li>Berthold</li>
+          <li>Oswine</li>
+          <li>Ladislaus</li>
+        </ul>
+
+        <div id="member_search">
+          <input type="text" placeholder="...Find a member..." />
+        </div>
+      </div>
+    </main>
+
+    <script>
+      'use strict';
+
+      const $ = (qs) => document.querySelector(qs);
+      const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+
+      const chatListItemsEls = $$('#chat_members li');
+
+      // DOMTokenList - https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
+      console.log(chatListItemsEls[0].classList); //=> DOMTokenList ['admin']
+
+      // classtList (DOMTokenList Objekt) - Eigenschaft length
+      console.log(chatListItemsEls[0].classList.length); // => 1;
+
+      // classtList (DOMTokenList Objekt) - Methode add()
+      chatListItemsEls[0].classList.add('highlighted');
+
+      // classtList (DOMTokenList Objekt) - Methode remove()
+      chatListItemsEls[0].classList.remove('highlighted');
+
+      // classtList (DOMTokenList Objekt) - Methode toggle()
+      chatListItemsEls[0].classList.toggle('highlighted');
+      chatListItemsEls[0].classList.toggle('highlighted');
+
+      // classList - Methode contains()
+      console.log(chatListItemEls[0].classList.contains('highlighted')); // => false
+
+      console.log(chatListItemEls[0].classList.contains('admin')); // => true
+
+      // classList - Methode replace() - kein IE11 support
+      chatListItemEls[0].classList.replace('admin', 'client');
+      chatListItemEls[0].classList.replace('client', 'admin');
+
+      // classList - Methode item()
+      console.log(chatListItemEls[0].classList.item(0)); //=> 'admin'
+      console.log(chatListItemEls[0].classList[0]); //=> 'admin'
+    </script>
+  </body>
+</html>

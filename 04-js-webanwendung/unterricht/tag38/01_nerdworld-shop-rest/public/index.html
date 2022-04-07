@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nerdshop - Admin Panel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="m-nerdshop nerdshop">
+        <div class="container py-5">
+          <h1>Nerdshop - Admin Panel</h1>
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Code</th>
+                <th>Short Description</th>
+                <th>Tagline</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Stockwarn</th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-code">MUG0007</td>
+                <td class="td-desc">Lorem ipsum dolor sit amet.</td>
+                <td class="td-tagline">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
+                <td class="td-quantity">10</td>
+                <td class="td-price">39.39</td>
+                <td class="td-stockwarn">true</td>
+                <td class="td-actions">
+                  <button class="btn btn-primary button-edit">
+                    <i class="fa-solid fa-pen-clip"></i><span class="sr-only">Edit</span>
+                  </button>
+                  <button class="btn btn-danger button-delete">
+                    <i class="fa-solid fa-trash-alt"></i><span class="sr-only">Delete</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="7">
+                  <button
+                    class="btn btn-dark button-add"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-product-add"
+                  >
+                    <i class="fa-solid fa-plus"></i><span>Add Product</span>
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="modal-product-add"
+          tabindex="-1"
+          aria-labelledby="modalProductLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalProductLabel">Add Product</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form
+                action="http://localhost:3000/api/product"
+                class="form-product-add"
+                method="post"
+              >
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="input-code">Code</label>
+                        <input type="text" name="code" class="form-control" id="input-code" />
+                      </div>
+                    </div>
+                    <!-- ▲ /col ▲ -->
+                  </div>
+                  <!-- ▲ /row ▲ -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label class="form-label" for="input-description">Short Description</label>
+                        <input
+                          type="text"
+                          name="description"
+                          class="form-control"
+                          id="input-description"
+                        />
+                      </div>
+                    </div>
+                    <!-- ▲ /col ▲ -->
+                  </div>
+                  <!-- ▲ /row ▲ -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label class="form-label" for="ta-description">Tagline</label>
+                        <textarea
+                          name="tagline"
+                          id="ta-description"
+                          class="form-control"
+                          cols="30"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <!-- ▲ /col ▲ -->
+                  </div>
+                  <!-- ▲ /row ▲ -->
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="input-quantity">Quantity</label>
+                        <input
+                          type="number"
+                          id="input-quantity"
+                          class="form-control"
+                          name="quantity"
+                        />
+                      </div>
+                    </div>
+                    <!-- ▲ /col ▲ -->
+                    <div class="col-12 col-sm-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="input-price">Price</label>
+                        <input
+                          type="number"
+                          id="input-price"
+                          class="form-control"
+                          name="price"
+                          step="0.01"
+                        />
+                      </div>
+                    </div>
+                    <!-- ▲ /col ▲ -->
+                  </div>
+                  <!-- ▲ /row ▲ -->
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary button-modal-close"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-primary button-modal-add">
+                    Add Product
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲ /nerdshop ▲ -->
+    </main>
+  </body>
+</html>

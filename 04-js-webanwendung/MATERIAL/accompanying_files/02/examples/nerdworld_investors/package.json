@@ -1,0 +1,9 @@
+{
+    "name": "nerdworld_investors",
+    "version": "1.0.0",
+    "description": "nerdworld investor relations page",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}

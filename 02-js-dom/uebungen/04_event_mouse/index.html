@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event - MouseEvent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .box {
+        width: 40px;
+        height: 40px;
+        background-color: tomato;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1>Event - MouseEvent</h1>
+        <img src="https://dummyimage.com/600x300jpg" class="img-thumbnail d-block mb-3" alt="" />
+        <button class="btn btn-primary button-click">Klick mich!</button>
+      </div>
+      <div class="box"></div>
+    </main>
+    <script>
+      'use strict';
+      const $ = (qs) => document.querySelector(qs);
+      const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+
+      const imgEl = $('img');
+      const buttonEl = $('.button-click');
+      const boxEl = $('.box');
+
+      // MouseEvent - click - Ereignis wird ausgeführt, wenn Benutzer auf das Element klickt.
+
+      buttonEl.addEventListener('click', (e) => {
+        console.log('click', e);
+        console.log(e.currentTarget);
+        console.log(e.target);
+        buttonEl.style.cursor = 'url("IE-chan.png"), auto';
+      });
+
+      buttonEl.addEventListener('mouseout', (e) => {
+        buttonEl.style.cursor = 'default';
+      });
+
+      // Mouse Event - mouseenter - Ereignis wird ausgefährt wenn Benutzer über ein Element fährt
+      imgEl.addEventListener('mouseenter', (e) => {
+        console.log('mouseenter', e);
+        console.log('screenX:', e.screenX, 'screenY:', e.screenY);
+      });
+
+      // Mouse Event - mouseleave - Ereignis wird ausgefährt wenn Benutzer aus ein Element fährt
+      imgEl.addEventListener('mouseleave', (e) => {
+        console.log('mouseleave', e);
+      });
+
+      // Mouse Event - mousemove - Ereignis wird ausgefährt wenn Benutzer aus ein Element fährt
+      imgEl.addEventListener('mousemove', (e) => {
+        console.log('mouseleave', e);
+        console.log('X:', e.clientX, 'screenY:', e.clientY);
+        imgEl.style.cursor = 'url("IE-chan.png"), auto';
+      });
+
+      // window.addEventListener('mousemove', (e) => {
+      //   boxEl.style.top = e.clientY - 15 + 'px';
+      //   boxEl.style.left = e.clientX - 15 + 'px';
+      // });
+    </script>
+  </body>
+</html>

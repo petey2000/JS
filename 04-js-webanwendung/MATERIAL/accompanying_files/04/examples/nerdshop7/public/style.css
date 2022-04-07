@@ -1,0 +1,14 @@
+body {
+    background-color: #eeeeee;
+    font-family: sans-serif;
+}
+h1 {
+    color: #aa6600;
+}
+.hi {
+    background-color: #ffeeaa;
+}
+a,
+a.visited {
+    color: #3333ff;
+}

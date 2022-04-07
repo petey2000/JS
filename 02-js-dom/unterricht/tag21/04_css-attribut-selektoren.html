@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Attribut-Selektor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .menu-main > ul > li > a {
+        color: tomato;
+        padding: 1rem;
+        display: inline-block;
+        text-decoration: none;
+      }
+      /* Attribut Selector [attribut]*/
+      .menu-main ul li a[href$='.de'] {
+        color: lightblue;
+      }
+
+      .menu-main ul li a[href^='http://']
+      {
+        color: red;
+      }
+
+      img[src*='.jpg'] {
+        border: 10px solid #555;
+      }
+
+      img[alt='Bild 01'] {
+        border: 5px solid red;
+      }
+
+      /* Adjacent sibling combinator (+) */
+      h2 + p {
+        color: #999;
+      }
+
+      /* General sibling combinator (~)*/
+      ul.list li:nth-child(2) ~ li img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1>CSS Attribut-Selektor</h1>
+        <nav class="menu-main">
+          <ul class="list">
+            <li><a href="https://google.de">Google</a></li>
+            <li><a href="https://netflix.com">Netflix</a></li>
+            <li><a href="https://amazon.de">Amazon</a></li>
+            <li><a href="../tag21/02_document-query-selector.html">Seite: document.querySelector</a></li>
+          </ul>
+        </nav>
+
+        <h2>Bilder</h2>
+        <p>Erstellte Bilder über Dummyimage.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, asperiores. Enim odit officiis deserunt repellat laborum, asperiores at
+          voluptatibus consequatur. Commodi necessitatibus minima nisi eos nihil iure, consectetur maiores ex.
+        </p>
+        <ul class="list">
+          <li><img src="https://dummyimage.com/400x300/000/fff.jpg" alt="Bild 01" /></li>
+          <li><img src="https://dummyimage.com/400x300/fd0/fff.png" alt="" /></li>
+          <li><img src="https://dummyimage.com/400x300/0ff/fff.jpg" alt="" /></li>
+          <li><img src="https://dummyimage.com/400x300/0f0/fff.gif" alt="" /></li>
+          <li><img src="https://dummyimage.com/400x300/f00/fff.jpg" alt="" /></li>
+        </ul>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem recusandae consequuntur, expedita sunt quis, ratione quidem minima
+          suscipit natus alias totam ipsum minus quae earum. Expedita minus illum adipisci consequuntur.
+        </p>
+      </div>
+    </main>
+    <script>
+      'use strict';
+
+      const deLinkEls = document.querySelectorAll('.menu-main ul li a[href$=".de"]');
+      console.log(deLinkEls);
+    </script>
+  </body>
+</html>

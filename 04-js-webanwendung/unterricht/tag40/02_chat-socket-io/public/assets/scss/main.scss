@@ -1,0 +1,94 @@
+// sass public/assets/scss/main.scss:public/assets/css/main.css -w
+
+body {
+  background-color: #efefef;
+}
+
+/* Module: Chat */
+.m-chat {
+  padding: 3rem 0;
+  .display {
+    &.bg-light {
+      background-color: #f8f8f8;
+    }
+    position: relative;
+    height: 50vh;
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .user-counter {
+    font-size: 1rem;
+    position: absolute;
+    display: inline-block;
+    margin: 0 0 15px 10px;
+    color: steelblue;
+  }
+
+  .chat-messages {
+    position: absolute;
+    padding: 1rem;
+    height: calc(100% - 90px);
+    width: calc(100% - 32px);
+    background-color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: scroll;
+
+    &:empty {
+      &::after {
+        content: 'no messages found';
+        color: #999;
+      }
+    }
+
+    .server {
+      color: rgb(187, 83, 83);
+    }
+    .client {
+      color: rgb(123, 182, 115);
+    }
+  }
+
+  .client-alert {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Drop Shadow - Effect*/
+.drop-shadow {
+  position: relative;
+  padding: 1em;
+  margin: 2em 10px 4em;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -mox-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.drop-shadow:before,
+.drop-shadow:after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
+.drop-shadow:before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+
+  border-radius: 10px / 100px;
+}
+
+.drop-shadow:after {
+  top: 10px;
+  bottom: 10px;
+  right: 0;
+  left: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+
+  border-radius: 10px / 100px;
+}

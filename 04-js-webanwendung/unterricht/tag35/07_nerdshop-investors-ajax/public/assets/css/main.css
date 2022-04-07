@@ -1,0 +1,49 @@
+*,
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-main {
+  background: radial-gradient(circle, rgba(255, 99, 71, 1) 0%, rgba(171, 62, 43, 1) 100%);
+  display: flex;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.header-main h1 {
+  color: white;
+  text-align: center;
+}
+
+.stock-info {
+  border-radius: 1rem;
+  background-color: #efefef;
+  padding: 3rem;
+}
+
+.menu-main ul {
+  width: 100%;
+  background-color: #efefef;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-main ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #333;
+}

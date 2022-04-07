@@ -1,0 +1,12 @@
+{
+  "name": "loop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "loop.js",
+  "scripts": {
+    "test": "node tests/loop.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

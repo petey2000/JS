@@ -1,0 +1,11 @@
+{
+  "mocha.files.glob": "**/**/*.spec.js",
+  "mocha.runTestsOnSave": "true",
+  "mocha.sideBarOptions": {
+    "lens": true,
+    "decoration": true,
+    "autoUpdateTime": 200
+  },
+  "files.autoSave": "on",
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Eigene Attribute mit data-[Attribut] - DOMStringMap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1>JS - Eigene Attribute mit data-[Attribut] - DOMStringMap</h1>
+
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap">DOMStringMap</a> -
+          The DOMStringMap interface is used for the HTMLOrForeignElement.dataset attribute, to
+          represent data for custom attributes added to elements.
+        </p>
+
+        <button
+          class="btn btn-primary button"
+          data-content="Text für Headline"
+          data-ref="h1"
+          data-content-id="0"
+          data-my-attribut-with-many-words="yes"
+        >
+          Button mit eigenen Attributen
+        </button>
+
+        <p class="my-5">
+          In your
+          <strong
+            class="keyword"
+            data-tooltip="The brain's outer layer of neural tissue in humans and other mammals [wikipedia]."
+            >cerebral cortex</strong
+          >
+          right now,…
+        </p>
+
+        <button class="btn btn-dark button-redirect">
+          Weiterleitung in <span class="timer-counter" data-timer="10"></span>
+        </button>
+      </div>
+    </main>
+    <script>
+      'use strict';
+
+      (() => {
+        const $ = (qs) => document.querySelector(qs);
+        const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+
+        // === DOM & VARS ===
+        const DOM = {};
+        DOM.button = $('.button');
+        DOM.keywords = $$('.keyword');
+        DOM.buttonRedirect = $('.button-redirect');
+
+        // === INIT =========
+
+        const init = () => {
+          console.log(DOM.button.dataset); //=> DOMStringMap -Objekt mit eigenen Attributen als Eigenschaften
+          DOM.button.addEventListener('click', onClickButton);
+          DOM.buttonRedirect.addEventListener('click', onClickRedirect);
+          DOM.keywords.forEach((el) => el.addEventListener('mouseenter', onEnterKeyword));
+        };
+
+        // === EVENTS / XHR =======
+        const onClickButton = (e) => {
+          const button = e.currentTarget;
+          const selector = button.dataset.ref;
+          const content = button.dataset.content;
+
+          $(selector).textContent = content;
+        };
+
+        const onEnterKeyword = (e) => {
+          const span = e.currentTarget;
+
+          console.log(span.dataset.tooltip);
+        };
+
+        const onClickRedirect = (e) => {
+          const button = e.currentTarget;
+          const count = Number($('.timer-counter').dataset.timer) || 5;
+          timer(count, button);
+        };
+
+        // === FUNCTIONS ====
+        const timer = (count = 5, el = null, secs = 1) => {
+          if (count === 0) {
+            el.disabled = false;
+            $('.timer-counter').textContent = '';
+            window.location.replace('https://www.gfn.de');
+
+            return false;
+          }
+
+          $('.timer-counter').textContent = count;
+
+          setTimeout(() => {
+            timer(--count, el);
+          }, secs * 1000);
+        };
+
+        init();
+      })();
+    </script>
+  </body>
+</html>

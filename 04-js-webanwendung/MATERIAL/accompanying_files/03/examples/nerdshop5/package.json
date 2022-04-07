@@ -1,0 +1,10 @@
+{
+    "name": "nerdshop",
+    "version": "5.0.0",
+    "description": "nerdshop 5",
+    "private": true,
+    "dependencies": {
+        "ejs": "^3.1.5",
+        "express": "^4.17.1"
+    }
+}

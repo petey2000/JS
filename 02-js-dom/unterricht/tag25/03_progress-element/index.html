@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Progress Element</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1>HTML Progress Element</h1>
+        <form action="">
+          <div class="mb-3">
+            <label for="progress-percent">Fortschrittbalken</label>
+            <progress name="percent" id="progress-percent" value="50" max="100" class="form-control progress"></progress>
+          </div>
+          <div class="mb-3">
+            <label for="input-zip-code">PLZ</label>
+            <input type="number" class="form-control" name="zip-code" id="input-zip-code" min="0" max="8000" step="1" value="60431" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      'use strict';
+
+      const $ = (qs) => document.querySelector(qs);
+      const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+
+      const progressEl = $('progress');
+      const inputEl = $('input[type="number"]');
+
+      console.log(progressEl.id); //=> progress-percent
+      console.log(progressEl.classList); //=> DOMTokenList [form-control]
+      console.log(progressEl.name); //=> percent
+
+      // Progress Element (Ausnahme)
+      console.log(progressEl.value); //=> 50 <- Type Number
+      console.log(progressEl.max); //=> 50 <- Type Number
+
+      // Input Element (Number)
+      console.log(inputEl.value); //=> '60431' <- Type String
+      console.log(inputEl.max); //=> '8000' <- Type String
+
+      inputEl.addEventListener('input', (e) => {
+        console.log('value:', e.target.value); //=> Type String
+
+        console.log('getAttribute: ', inputEl.getAttribute('value')); //=> Ursprungswert, der zu Beginn im Element vorliegt
+      });
+
+      // Content Attribut-Methoden mit getAttribute() & setAttribute.
+
+      console.log(progressEl.getAttribute('value')); //=> 50 <- TypeString
+      console.log(progressEl.getAttribute('class')); //=> "form-control progress";
+
+      progressEl.setAttribute('data-style', 'dark');
+      progressEl.setAttribute('value', '100');
+
+      progressEl.removeAttribute('data-style');
+    </script>
+  </body>
+</html>

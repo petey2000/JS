@@ -1,0 +1,18 @@
+body {
+    background-color: #eeeeee;
+    margin: 20px;
+}
+
+body,
+input,
+button {
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 16px;
+    text-align: left;
+}

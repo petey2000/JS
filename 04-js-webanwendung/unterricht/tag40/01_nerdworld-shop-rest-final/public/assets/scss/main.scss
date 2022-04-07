@@ -1,0 +1,40 @@
+// sass assets/scss/main.scss:assets/css/main.css -w
+*,
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.m-nerdshop {
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  table {
+    .td-desc {
+      max-width: 300px;
+    }
+    .td-tagline {
+      max-width: 200px;
+    }
+
+    button {
+      margin: 3px;
+
+      // &.button-edit {
+      //   font-size: 2rem;
+      // }
+      &.button-add {
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

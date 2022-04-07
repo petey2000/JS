@@ -1,0 +1,10 @@
+{
+    "name": "nerdshop",
+    "version": "4.1.0",
+    "description": "solution to the exercise: show short product description on the index page",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "ejs": "^3.1.5"
+    }
+}

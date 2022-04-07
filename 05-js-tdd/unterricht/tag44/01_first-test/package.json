@@ -1,0 +1,17 @@
+{
+  "name": "01_first-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha",
+    "watch": "npx mocha -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.2.0",
+    "must": "^0.13.4"
+  }
+}

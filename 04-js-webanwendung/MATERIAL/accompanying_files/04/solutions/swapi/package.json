@@ -1,0 +1,9 @@
+{
+    "name": "swapi",
+    "version": "1.0.0",
+    "description": "solution to the SWAPI-exercise",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "nerdshop",
+    "version": "3.0.0",
+    "description": "now using EJS and a template for the index",
+    "private": true,
+    "dependencies": {
+        "ejs": "^3.1.5",
+        "express": "^4.17.1"
+    }
+}

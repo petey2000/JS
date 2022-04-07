@@ -1,0 +1,117 @@
+body {
+  background-color: #efefef;
+}
+
+/* Module: LoginUsername */
+.m-login-username {
+  position: absolute;
+  overflow: hidden;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.m-login-username .container-fluid .row,
+.m-login-username .container .row {
+  display: flex;
+  justify-content: center;
+}
+.m-login-username .container-fluid .box-username h3,
+.m-login-username .container-fluid .box-username h4,
+.m-login-username .container .box-username h3,
+.m-login-username .container .box-username h4 {
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+}
+
+/* Module: Chat */
+.m-chat {
+  padding: 3rem 0;
+}
+.m-chat .display {
+  position: relative;
+  height: 50vh;
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  border-radius: 16px;
+}
+.m-chat .display.bg-light {
+  background-color: #f8f8f8;
+}
+.m-chat .user-counter {
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  margin: 0 0 15px 10px;
+  color: steelblue;
+}
+.m-chat .chat-messages {
+  position: absolute;
+  padding: 1rem;
+  height: calc(100% - 90px);
+  width: calc(100% - 32px);
+  background-color: #ccc;
+  font-family: "Courier New", Courier, monospace;
+  overflow-y: scroll;
+}
+.m-chat .chat-messages:empty::after {
+  content: "no messages found";
+  color: #999;
+}
+.m-chat .chat-messages .server {
+  color: #bb5353;
+}
+.m-chat .chat-messages .client {
+  color: #369c28;
+}
+.m-chat .client-alert {
+  width: 100%;
+  display: block;
+}
+
+/* Drop Shadow - Effect*/
+.drop-shadow {
+  position: relative;
+  padding: 1em;
+  margin: 2em 10px 4em;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -mox-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+
+.drop-shadow:before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px/100px;
+}
+
+.drop-shadow:after {
+  top: 10px;
+  bottom: 10px;
+  right: 0;
+  left: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px/100px;
+}
+
+/*# sourceMappingURL=main.css.map */

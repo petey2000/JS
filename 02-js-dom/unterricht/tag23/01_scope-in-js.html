@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1></h1>
+      </div>
+    </main>
+    <script>
+      'use strict';
+      {
+        let text = 'Hello';
+        const numbers = [1, 2, 3, 4];
+        // kein eingeschränkten Gültigkeitsbereich bei Variablen mit "var"
+        var test = 'Ich bin nicht geschützt';
+      }
+      console.log(test);
+    </script>
+
+    <script>
+      'use strict';
+      (() => {
+        let text = 'Hello';
+        const numbers = [1, 2, 3, 4];
+        var test2 = 'Ich bin geschützt';
+      })();
+      console.log(test2); // Existiert nicht
+    </script>
+  </body>
+</html>

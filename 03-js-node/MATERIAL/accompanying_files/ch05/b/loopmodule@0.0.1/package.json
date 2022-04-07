@@ -1,0 +1,12 @@
+{
+    "name": "loopmodule",
+    "version": "0.0.1",
+    "description": "handy loop functions",
+    "main": "loop.js",
+    "keywords": [
+        "times",
+        "range"
+    ],
+    "author": "Chris Mair <chris@1006.org>",
+    "license": "MIT"
+}

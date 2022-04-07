@@ -1,0 +1,10 @@
+{
+    "name": "nerdshop",
+    "version": "4.0.0",
+    "description": "now using a template for the product pages too",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "ejs": "^3.1.5"
+    }
+}

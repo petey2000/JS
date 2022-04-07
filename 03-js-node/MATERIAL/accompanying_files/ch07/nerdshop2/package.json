@@ -1,0 +1,9 @@
+{
+    "name": "nerdshop",
+    "version": "2.0.0",
+    "description": "now serving all product pages using a parameter",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}

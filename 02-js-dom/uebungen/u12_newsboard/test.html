@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test für button disable enable un so</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background: black;
+        color: white;
+      }
+
+      .btn {
+        font-size: 3rem;
+      }
+
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1>test für button disable enable un so</h1>
+        <button class="btn btn-info tobedisabled">testButton</button><br />
+        <button class="btn btn-primary disable">disable button 1</button><br />
+        <button class="btn btn-secondary enable">enable button 1</button>
+      </div>
+    </main>
+    <script>
+      'use strict';
+
+      const button = document.querySelector('.tobedisabled');
+      const button2 = document.querySelector('.disable');
+      const button3 = document.querySelector('.enable');
+
+      button.addEventListener('click', (e) => {
+        console.log('hello world.');
+      });
+
+      button2.addEventListener('click', (e) => {
+        button.setAttribute('disabled', 'true');
+      });
+
+      button3.addEventListener('click', (e) => {
+        button.removeAttribute('disabled');
+      });
+    </script>
+  </body>
+</html>

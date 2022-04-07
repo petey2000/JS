@@ -1,0 +1,9 @@
+{
+    "name": "nerdshop",
+    "version": "1.0.0",
+    "description": "reads the CSV file and serves a single product page with Express",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}

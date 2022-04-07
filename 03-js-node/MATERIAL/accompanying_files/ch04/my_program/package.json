@@ -1,0 +1,10 @@
+{
+    "name": "my_program",
+    "version": "1.0.0",
+    "description": "the best program",
+    "private": true,
+    "dependencies": {
+        "moment": "^2.29.1",
+        "validator": "^5.7.0"
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "transformedname",
+  "version": "1.0.0",
+  "description": "Transforming name by returning just one letter for Firstname",
+  "main": "transformedName.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/transformedName.test.js"
+  },
+  "keywords": [
+    "nameshortener",
+    "short",
+    "name"
+  ],
+  "author": "",
+  "license": "ISC"
+}

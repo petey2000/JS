@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.m-jokes {
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  background: #222 url('../img/bg-texture.jpg') center border-box no-repeat fixed;
+  border: 20px solid rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.m-jokes::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.m-jokes blockquote {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  max-width: 80%;
+  position: relative;
+}
+
+.m-jokes blockquote::before,
+.m-jokes blockquote::after {
+  position: absolute;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.m-jokes blockquote::before {
+  content: '\f10e';
+  left: -40px;
+  top: -40px;
+  transform: rotate(-20deg);
+}
+
+.m-jokes blockquote::after {
+  content: '\f10d';
+  right: -20px;
+  bottom: -40px;
+  transform: rotate(20deg);
+}
+
+.m-jokes footer {
+  padding: 3rem;
+  color: white;
+}
+.m-jokes footer .icon-heart {
+  color: #c00;
+  margin-left: 10px;
+  font-size: 1rem;
+  display: inline-block;
+
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.m-jokes footer .icon-heart::before {
+  display: inline-block;
+  margin: -0.5rem 0 0 1rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 1rem;
+  }
+  50% {
+    font-size: 2rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+}

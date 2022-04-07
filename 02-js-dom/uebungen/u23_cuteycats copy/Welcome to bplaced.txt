@@ -1,0 +1,12 @@
+
+
+Welcome to bplaced!
+
+
+You can access your webspace with a web browser by putting your files
+into your public directory www.
+
+This root-folder can be used for temporary files or any content that
+should not be publicly accessible.
+
+This file is for your information only and can be removed at any time.

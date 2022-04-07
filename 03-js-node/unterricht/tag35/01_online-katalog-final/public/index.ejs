@@ -1,0 +1,13 @@
+<%- include('partials/head', {pageTitle: 'Overview'}); %>
+<main>
+  <div class="container py-5">
+    <h1>Online Katalog</h1>
+
+    <ul class="list">
+      <% products.forEach((product, idx) => { %>
+      <li>Product: <a href="/product/<%= idx + 1  %>"> <%= product.shortdesc %> </a></li>
+      <% }) %>
+    </ul>
+  </div>
+</main>
+<%- include('partials/foot') %>

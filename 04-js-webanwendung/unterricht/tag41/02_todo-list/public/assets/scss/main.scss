@@ -1,0 +1,37 @@
+// sass public/assets/scss/main.scss:public/assets/css/main.css -w
+
+/* Modul: Todolist */
+.m-todolist {
+  ul.list {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button-delete-todo {
+        color: #888;
+        &::before {
+          content: '\f057';
+          font-family: 'Font Awesome 6 Free';
+          font-weight: 900;
+          font-size: 24px;
+        }
+        &:hover,
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          color: darken(#888, 20%);
+        }
+      }
+
+      input[type='checkbox']:checked {
+        + label {
+          text-decoration: line-through;
+        }
+      }
+
+      .datetime {
+        color: #bbb;
+      }
+    }
+  }
+}

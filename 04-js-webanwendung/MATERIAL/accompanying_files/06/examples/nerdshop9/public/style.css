@@ -1,0 +1,33 @@
+body,
+input {
+    background-color: #eeeeee;
+    font-family: sans-serif;
+}
+td,
+input {
+    font-size: 12pt;
+}
+h1 {
+    color: #aa6600;
+}
+a,
+a.visited {
+    color: #3333ff;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 4px;
+    border: 1px solid black;
+    text-align: left;
+}
+th {
+    padding: 4px;
+    border: 1px solid black;
+    text-align: left;
+}
+.number,
+.formfield {
+    text-align: right;
+}

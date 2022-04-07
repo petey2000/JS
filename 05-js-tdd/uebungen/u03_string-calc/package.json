@@ -1,0 +1,18 @@
+{
+  "name": "u03-string-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stringCalc.js",
+  "directories": {
+    "test": "npx mocha"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.2.1",
+    "must": "^0.13.4"
+  }
+}

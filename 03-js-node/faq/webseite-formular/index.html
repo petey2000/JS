@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Webseite mit Kontaktformular</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="assets/js/libs/validator.min.js"></script>
+    <script type="module" src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-6">
+            <h2>Kontakt</h2>
+            <form action="http://localhost:8888/send.php" method="get" class="form-contact">
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label class="form-label" for="input-firstname">Vorname</label>
+                    <input type="text" name="firstname" class="form-control" id="input-firstname" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label class="form-label" for="input-lastname">Nachname</label>
+                    <input type="text" name="lastname" class="form-control" id="input-lastname" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="input-email">E-Mail</label>
+                  <input type="email" name="email" class="form-control" id="input-email" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="ta-message">Nachricht</label>
+                  <textarea
+                    name="message"
+                    id="ta-message"
+                    cols="30"
+                    class="form-control"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-dark button-send mb-3">Senden</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-4">
+            <h2>Adresse</h2>
+            <address>
+              Max Mustermann<br />
+              Teststr. 33<br />
+              60431 Entenhausen
+            </address>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

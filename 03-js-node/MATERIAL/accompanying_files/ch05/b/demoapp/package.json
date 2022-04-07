@@ -1,0 +1,9 @@
+{
+    "name": "demoapp",
+    "version": "1.0.0",
+    "description": "test the loopmodule",
+    "private": true,
+    "dependencies": {
+        "file:///Users/chris/Desktop/additional_files/ch05/b/loopmodule": "0.0.1"
+    }
+}

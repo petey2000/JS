@@ -1,0 +1,11 @@
+{
+    "name": "transport_map",
+    "version": "0.0.1",
+    "description": "public transport map",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "proj4": "^2.7.0",
+        "request": "^2.88.2"
+    }
+}

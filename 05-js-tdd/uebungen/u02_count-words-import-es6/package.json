@@ -1,0 +1,21 @@
+{
+  "name": "u02_countwords",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dec.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "npx mocha",
+    "watch": "npx mocha -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.2.1",
+    "must": "^0.13.4"
+  }
+}

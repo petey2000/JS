@@ -1,0 +1,23 @@
+{
+  "name": "u04_fizzbuzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizzbuzz.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "watcher": "mocha --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.4.0",
+    "must": "^0.13.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

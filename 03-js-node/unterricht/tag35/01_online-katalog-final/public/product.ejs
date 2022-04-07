@@ -1,0 +1,15 @@
+<%- include('partials/head', { pageTitle: product.tagline}) %>
+<main>
+  <div class="container py-5">
+    <h1>Product</h1>
+    <hr />
+    <h2><%= product.shortdesc %></h2>
+    <p><i><%= product.tagline %></i></p>
+    <p>Price: EUR <%= product.price %></p>
+
+    <% if (product.stockwarn) { %>
+    <p>Last items in stock!</p>
+    <% } %>
+  </div>
+</main>
+<%- include('partials/foot') %>

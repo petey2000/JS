@@ -1,0 +1,16 @@
+{
+    "name": "string_calc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx mocha --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "mocha": "^8.2.1",
+        "must": "^0.13.4"
+    }
+}
